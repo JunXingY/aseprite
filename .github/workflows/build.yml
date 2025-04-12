@@ -4,9 +4,9 @@ jobs:
   build:
     runs-on: ${{ matrix.os }}
     strategy:
-      fail-fast: false
+      fail-fast: true
       matrix:
-        os: [windows-latest]
+        os: [windows-latest, macos-latest, ubuntu-latest]
         build_type: [Release]
         ui: [gui, cli]
         scripting: [lua, noscripts]
